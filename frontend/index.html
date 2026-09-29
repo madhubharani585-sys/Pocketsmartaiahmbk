@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PocketSmart AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>PocketSmart <span class="badge">AI</span></h1>
+    <p>Tell us your budget. We plan where every rupee goes.</p>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="home" role="tab">Home decor</button>
+    <button class="tab" data-tab="party" role="tab">Party</button>
+    <button class="tab" data-tab="jewelry" role="tab">Jewelry</button>
+  </nav>
+
+  <main>
+    <section id="home" class="panel active">
+      <form id="form-home">
+        <label>Total budget (₹)<input name="budget" type="number" min="500" required placeholder="150000"></label>
+        <div id="home-rows"></div>
+        <button type="button" id="add-row" class="ghost">+ Add item</button>
+        <button type="submit">Plan my home</button>
+      </form>
+    </section>
+
+    <section id="party" class="panel">
+      <form id="form-party">
+        <label>Total budget (₹)<input name="budget" type="number" min="500" required placeholder="50000"></label>
+        <label>Guests<input name="guests" type="number" min="1" required placeholder="40"></label>
+        <label>Event type
+          <select name="event"><option>birthday</option><option>corporate</option><option>wedding</option><option>anniversary</option><option>baby shower</option></select>
+        </label>
+        <label>Venue<input name="venue" required placeholder="Rooftop terrace / banquet hall / home"></label>
+        <label>City (optional)<input name="city" placeholder="Chennai"></label>
+        <button type="submit">Plan my party</button>
+      </form>
+    </section>
+
+    <section id="jewelry" class="panel">
+      <form id="form-jewelry">
+        <label>Total budget (₹)<input name="budget" type="number" min="500" required placeholder="20000"></label>
+        <label>Occasion
+          <select name="occasion"><option>wedding</option><option>festival</option><option>party</option><option>office</option><option>engagement</option></select>
+        </label>
+        <label>Style
+          <select name="style"><option>traditional</option><option>modern</option><option>minimal</option><option>statement</option><option>oxidised</option></select>
+        </label>
+        <label>Notes (optional)<input name="notes" placeholder="Gold tone, lightweight, for a green saree"></label>
+        <label>Outfit photo (optional)<input name="outfit" type="file" accept="image/jpeg,image/png,image/webp"></label>
+        <img id="preview" alt="Outfit preview" hidden>
+        <button type="submit">Find jewelry</button>
+      </form>
+    </section>
+
+    <div id="status" role="status" aria-live="polite"></div>
+    <div id="results"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

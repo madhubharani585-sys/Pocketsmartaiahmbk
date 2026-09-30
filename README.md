@@ -6,7 +6,7 @@ PocketSmart AI helps users plan their spending based on a fixed budget. It uses 
 
 🌐 Live Demo
 
-👉 "Open PocketSmart AI" 
+👉 "Open PocketSmart AI"
 
 ✨ Features
 
@@ -84,14 +84,14 @@ Deployment
 PocketSmart_AI/
 │
 ├── backend/
-│   ├── app.py
-│   ├── ai_service.py
-│   └── requirements.txt
+│ ├── app.py
+│ ├── ai_service.py
+│ └── requirements.txt
 │
 ├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   └── app.js
+│ ├── index.html
+│ ├── style.css
+│ └── app.js
 │
 ├── .gitignore
 └── README.md
@@ -99,17 +99,17 @@ PocketSmart_AI/
 🔄 How It Works
 
 User Input
-    ↓
+↓
 PocketSmart AI Frontend
-    ↓
+↓
 Flask Backend API
-    ↓
+↓
 Google Gemini AI
-    ↓
+↓
 AI Budget & Recommendation Plan
-    ↓
+↓
 Budget Allocation + Products + Search Links
-    ↓
+↓
 User
 
 🚀 Run Locally

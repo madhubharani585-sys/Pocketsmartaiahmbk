@@ -5,7 +5,7 @@ from pathlib import Path
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
-import ai_service as ai
+from backend import ai_service as ai
 
 FRONTEND = Path(__file__).resolve().parent.parent / "frontend"
 app = Flask(__name__, static_folder=str(FRONTEND), static_url_path="")
